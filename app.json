@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "temp",
+    "name": "reactive",
     "description": "This project is really great.",
-    "slug": "temp",
+    "slug": "reactive",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],

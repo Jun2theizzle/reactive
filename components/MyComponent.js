@@ -6,7 +6,6 @@ export default class MyComponent extends Component {
         super(props);
     }
 
-
     render() {
         return (
             <Button 
