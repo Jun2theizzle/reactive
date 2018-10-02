@@ -1,6 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MyComponent from './components/MyComponent'
+import { Provider, connect } from 'react-redux';
+import { createStore } from 'redux';
+import MyComponent from './components/MyComponent';
+import reducer from './redux/reducers';
+
+const store = createStore(reducer);
 
 export default class App extends React.Component {
   constructor(props) {
@@ -22,12 +27,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-      <Text>
-        {this.state.myText}
-      </Text>
-        < MyComponent onClickHandler = {this._onClickHandler} />
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+        <Text>
+          {this.state.myText}
+        </Text>
+          < MyComponent onClickHandler = {this._onClickHandler} />
+        </View>
+      </Provider>
     );
   }
 }
