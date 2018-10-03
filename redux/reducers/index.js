@@ -1,12 +1,7 @@
 import { ADD_USER, LIST_USERS } from '../constants/action-types'
 
 const initialState = {
-    users: [
-        {
-            id: 1,
-            name: 'blach'
-        }
-    ]
+    users: []
 };
 
 export default function reducer(state = initialState, action) {
