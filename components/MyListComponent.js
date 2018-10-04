@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Text, Alert, Button, View, FlatList, ListItem, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import uuidv4 from 'uuid/v4';
-import { listUsers, addUser } from '../redux/reducers'
+import { listUsers, addUser } from '../app-redux/reducers'
 
-class MyComponent extends Component {
+class MyListComponent extends Component {
     constructor(props) {
         super(props);
     }
@@ -67,4 +67,4 @@ const mapDispatchToProps = {
     listUsers, addUser
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(MyListComponent);

@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider, connect } from 'react-redux';
 import { createStore } from 'redux';
-import MyComponent from './components/MyComponent';
-import reducer from './redux/reducers';
+import { MyListComponent, MyFormComponent } from './components';
+import reducer from './app-redux/reducers';
 
 const store = createStore(reducer);
 
@@ -32,7 +32,7 @@ export default class App extends React.Component {
         <Text>
           {this.state.myText}
         </Text>
-        < MyComponent />
+        < MyListComponent />
         </View>
       </Provider>
     );
